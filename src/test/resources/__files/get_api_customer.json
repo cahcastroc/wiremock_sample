@@ -1,0 +1,105 @@
+{
+  "data":
+    {
+      "updateDateTime": "2023-10-13T12:00:00Z",
+      "personalId": "capy-123-456-789",
+      "brandName": "Capybara Bank",
+      "civilName": "Capivara Grande",
+      "socialName": "Capy",
+      "birthDate": "2010-02-02",
+      "maritalStatusCode": "SOLTEIRO",
+      "maritalStatusAdditionalInfo": "Solteiro",
+      "sex": "MASCULINO",
+      "companiesCnpj": ["12345678000199", "12345678000279"],
+      "documents": {
+        "cpfNumber": "12345678901",
+        "passport": {
+          "number": "C12345678",
+          "country": "BRA",
+          "expirationDate": "2030-12-31",
+          "issueDate": "2020-01-01"
+        }
+      },
+      "otherDocuments": [
+        {
+          "type": "RG",
+          "typeAdditionalInfo": "SSP-SP",
+          "number": "123456789",
+          "checkDigit": "X",
+          "additionalInfo": "SSP/SP",
+          "expirationDate": "2030-01-01"
+        }
+      ],
+      "hasBrazilianNationality": true,
+      "nationality": [
+        {
+          "otherNationalitiesInfo": "ARG",
+          "documents": [
+            {
+              "type": "SOCIAL SEC",
+              "number": "987654321",
+              "expirationDate": "2025-12-31",
+              "issueDate": "2020-01-01",
+              "country": "ARG",
+              "additionalInfo": "Informações adicionais."
+            }
+          ]
+        }
+      ],
+      "filiation": [
+        {
+          "type": "PAI",
+          "civilName": "Capivara Pai",
+          "socialName": "Capy Pai"
+        }
+      ],
+      "contacts": {
+        "postalAddresses": [
+          {
+            "isMain": true,
+            "address": "Rua das Capivaras, 123",
+            "additionalInfo": "Apto 45",
+            "districtName": "Lagoa",
+            "townName": "Capivara City",
+            "ibgeTownCode": "3550308",
+            "countrySubDivision": "SP",
+            "postCode": "01001000",
+            "country": "Brasil",
+            "countryCode": "BRA",
+            "geographicCoordinates": {
+              "latitude": "-23.550520",
+              "longitude": "-46.633308"
+            }
+          }
+        ],
+        "phones": [
+          {
+            "isMain": true,
+            "type": "CELULAR",
+            "additionalInfo": "Informações adicionais.",
+            "countryCallingCode": "55",
+            "areaCode": "11",
+            "number": "912345678",
+            "phoneExtension": "123"
+          }
+        ],
+        "emails": [
+          {
+            "isMain": true,
+            "email": "capy.grande@capybarabank.com"
+          }
+        ]
+      }
+    }
+  ,
+  "links": {
+    "self": "https://api.capybarabank.com.br/open-banking/api/v1/resource",
+    "first": "https://api.capybarabank.com.br/open-banking/api/v1/resource",
+    "prev": "https://api.capybarabank.com.br/open-banking/api/v1/resource",
+    "next": "https://api.capybarabank.com.br/open-banking/api/v1/resource",
+    "last": "https://api.capybarabank.com.br/open-banking/api/v1/resource"
+  },
+  "meta": {
+    "requestDateTime": "2023-10-13T12:00:00Z"
+  }
+}

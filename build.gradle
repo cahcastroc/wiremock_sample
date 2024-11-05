@@ -1,0 +1,67 @@
+plugins {
+    id 'java'
+    id 'jacoco'
+    id 'org.springframework.boot' version '3.2.5'
+    id 'io.spring.dependency-management' version '1.1.5'
+    id 'com.google.cloud.tools.jib' version '3.4.1'
+
+}
+
+repositories {
+    mavenCentral()
+}
+group = 'io.codeexperience.appwiremock'
+version = '1.0.0-SNAPSHOT'
+compileJava.options.encoding = 'UTF-8'
+
+springBoot {
+    buildInfo()
+}
+
+ext {
+    set('springCloudVersion', "2023.0.1")
+    set('springdocVersion', '2.5.0')
+    set('encoding', "UTF-8")
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation "org.springframework.cloud:spring-cloud-starter-bootstrap"
+
+    // Api Spring Web Mvc
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation "org.springdoc:springdoc-openapi-starter-webmvc-ui:${springdocVersion}"
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    //Opcionais
+
+    compileOnly 'org.projectlombok:lombok:1.18.32'
+    annotationProcessor 'org.projectlombok:lombok:1.18.32'
+    compileOnly 'org.projectlombok:lombok-mapstruct-binding:0.2.0'
+
+    implementation 'org.mapstruct:mapstruct:1.5.5.Final'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'
+
+
+
+    //Wiremock
+    implementation "org.springframework.cloud:spring-cloud-starter-contract-stub-runner"
+    implementation 'com.google.code.gson:gson:2.8.9'
+
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jacocoTestReport {
+    reports {
+        xml.required = true
+    }
+}
