@@ -1,0 +1,11 @@
+spring:
+  cloud.consul.enabled: false
+  cloud.vault.enabled: false
+
+observability:
+  metrics.enabled: false
+  tracing.enabled: false
+
+# NIVEL DE LOG Local
+logging.level:
+  root: INFO
